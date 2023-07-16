@@ -19,5 +19,5 @@ const StyledFooter = styled.footer`
 const StyledCompanyInfo = styled.p`
   margin: 0;
   font-size: 14px;
-  color: black;
+  color: white;
 `;
