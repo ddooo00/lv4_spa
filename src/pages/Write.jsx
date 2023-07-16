@@ -69,7 +69,7 @@ const Write = () => {
       <StyledTitle>Write Diary</StyledTitle>
       <StyledDate>July 7, 2023</StyledDate>
       <form onSubmit={handleWriteButtonClick}>
-        <StyledMoodLabel htmlFor="moodSelect">Mood:</StyledMoodLabel>
+        <StyledMoodLabel htmlFor="moodSelect">Feeling:</StyledMoodLabel>
         <StyledMoodSelect id="moodSelect" onChange={handleMoodChange}>
           <option value="1">1</option>
           <option value="2">2</option>

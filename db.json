@@ -10,13 +10,22 @@
       "password": "1234"
     },
     {
-      "moodCode": "5",
-      "title": "aa",
-      "body": "aaa",
+      "moodCode": 1,
+      "title": "비가 주룩",
+      "body": "비가 주룩",
       "password": "a",
       "isDeleted": false,
-      "createdAt": "Sun Jul 16 2023 22:22:15 GMT+0900 (한국 표준시)",
-      "id": 2
+      "createdAt": "Sun Jul 16 2023 22:54:07 GMT+0900 (한국 표준시)",
+      "id": 3
+    },
+    {
+      "moodCode": 1,
+      "title": "습하다",
+      "body": "습해",
+      "password": "a",
+      "isDeleted": false,
+      "createdAt": "Sun Jul 16 2023 22:57:03 GMT+0900 (한국 표준시)",
+      "id": 4
     }
   ]
 }

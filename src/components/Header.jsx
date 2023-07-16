@@ -51,6 +51,6 @@ const StyledWriteButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #81a4c2;
+    background-color: #070b5c;
   }
 `;

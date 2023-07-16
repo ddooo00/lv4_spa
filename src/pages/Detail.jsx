@@ -17,7 +17,7 @@ const Detail = () => {
     <StyledMain>
       <StyledTitle>{diary.title}</StyledTitle>
       <StyledDate>{diary.createdAt}</StyledDate>
-      <StyledMood>Mood: {diary.moodCode}</StyledMood>
+      <StyledMood>Feeling: {diary.moodCode}</StyledMood>
       <StyledContent>{diary.body}</StyledContent>
     </StyledMain>
   );
