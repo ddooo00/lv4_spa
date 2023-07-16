@@ -1,9 +1,38 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { useQuery } from "react-query";
+import { getDiaries } from "../api/diaries";
 
 const Main = () => {
   const navigate = useNavigate();
+
+  const { isLoading, isError, data } = useQuery("diaries", getDiaries);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     // const response = await axios.get("http://localhost:4000/diary");
+  //     // console.log("response", response.data);
+  //     // setDiary(response.data);
+
+  //     //thunk
+  //     dispatch(__getDiaries());
+  //   };
+  //   fetchData();
+  // }, []);
+
+  // const { data, isLoading, isError, error } = useSelector(
+  //   (state) => state.diary
+  // );
+
+  if (isLoading) {
+    return <h1>로딩중..</h1>;
+  }
+  if (isError) {
+    <h1>오류 발생!!!!</h1>;
+  }
+  // const [diary, setDiary] = useState([]);
 
   const handleDiaryItemClick = (id) => {
     navigate(`/detail/${id}`);
@@ -11,9 +40,12 @@ const Main = () => {
 
   return (
     <StyledMain>
-      {[...Array(10)].map((_, index) => (
-        <StyledDiaryBox key={index} onClick={handleDiaryItemClick}>
-          <StyledTitle>Diary {index + 1}</StyledTitle>
+      {data.data.map((item, index) => (
+        <StyledDiaryBox
+          key={index}
+          onClick={() => handleDiaryItemClick(item.id)}
+        >
+          <StyledTitle>{item.title}</StyledTitle>
           <StyledDate>July 7, 2023</StyledDate>
         </StyledDiaryBox>
       ))}

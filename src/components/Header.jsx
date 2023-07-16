@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledLogo
-        src="https://spartacodingclub.kr/_next/image?url=%2Fv5%2Ficons%2Flogo-active.png&w=1080&q=100"
+        src="https://cdn.icon-icons.com/icons2/2642/PNG/512/google_home_logo_icon_159344.png"
         alt="Logo"
         onClick={handleLogoClick}
       />
@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #3d5a80;
+  background-color: #070b5c;
 `;
 
 const StyledLogo = styled.img`
